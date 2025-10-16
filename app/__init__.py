@@ -1,5 +1,6 @@
 from flask import Flask
 from .routes.hello_world_routes import hello_world_bp
+from .routes.book_routes import books_bp
 
 
 def create_app():
@@ -7,5 +8,11 @@ def create_app():
 
     # Register Blueprints here
     app.register_blueprint(hello_world_bp)
+    app.register_blueprint(books_bp)
 
     return app
+
+
+
+
+
